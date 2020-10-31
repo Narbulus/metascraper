@@ -1,8 +1,8 @@
 declare module 'metascraper' {
   export default function MetaParser(rules: Rule[]): Scraper;
 
-  type Scraper = (options: ScrapOptions) => Promise<Metadata>;
-  interface ScrapOptions {
+  type Scraper = (options: ScrapeOptions) => Promise<Metadata>;
+  interface ScrapeOptions {
     url: string;
     html?: string;
     rules?: Rule[];

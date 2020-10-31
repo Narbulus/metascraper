@@ -8,13 +8,7 @@ declare module 'metascraper' {
     rules?: Rule[];
   }
   interface Metadata {
-    author: string;
-    date: string;
-    description: string;
-    image: string;
-    publisher: string;
-    title: string;
-    url: string;
+    [index: string]: string
   }
   type RuleSet = {
     [C in keyof Metadata]?: Array<Check>;
